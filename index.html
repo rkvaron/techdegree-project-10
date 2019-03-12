@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ 	<meta charset="utf-8">
+ 	<meta name=viewport content="width=device-width, initial-scale=1">
+ 	<title>Employee Directory</title>
+    <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="js/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+ </head>
+  <body>
+    <header>
+      
+    </header>
+      <div class="search_container">
+        <div class="search">
+          <form action="index.html" method="post">
+            <input type="text" id="search" name="user_search" onkeyup="myFunction()" placeholder="search (16pt) ">
+          </form>
+        </div>
+      </div>
+      <div class="container">
+        <ul id="employee_gallery">
+          <li class="employee">
+            <img src="img/user1.jpg" class="employee_photo"/>
+            <h2>Joe Shmo</h2>
+            <p><a href="mailto:joe@shmo.com">joe@shmo.com</a></p>
+            <p>Atlanta</p>
+          </li>
+        </ul>
+  </div>
+    <footer></footer>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script type="text/javascript">
+  	  $("[data-fancybox]").fancybox({
+        arrows: true,
+        'arrows': true,
+        'showNavArrows' :   true
+  	  });
+  </script>
+
+  </body>
+</html>
