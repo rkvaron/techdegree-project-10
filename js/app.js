@@ -53,7 +53,7 @@ $.ajax({
   		//write employee's card data
   		directoryHTML += '<div class="employee" id="employee' +i+ '">';
   		directoryHTML += '<a><li><div class="employeePic">';
-  		directoryHTML += '<img src="' + photo + '" alt="Picture of ' + firstname + '"" />'+'</div>';
+  		directoryHTML += '<img src="' + photo + '" alt="Picture of ' + firstname + '" />'+'</div>';
 		directoryHTML += '<div class="employeeText"><p class="name">'+ firstname + ' ' + lastname + '</p>';	
 		directoryHTML += '<p class="email">' + email + '</p>';
 		directoryHTML += '<p class="location">' + city + '</p>';
@@ -67,8 +67,36 @@ $.ajax({
 		//PLACE IT INTO THE #EMPLOYEEGALLERY DIV
 		$('#employeeGallery').html(directoryHTML);
 
+
   	}
   	}); //end AJAX
+
+//creating the MODAL
+const modal = document.getElementById('modal');
+const employeeGallery = document.getElementById('employeeGallery');
+function openModal() {
+	alert("modal code goes here!");
+}
+
+
+function populateModal(emp){
+
+}
+
+employeeGallery.addEventListener('click', (e) => {
+	console.log(e.target);
+	if (e.target.id !== "employeeGallery") {
+		openModal();
+		populateModal(e);
+
+	}
+});
+
+
+
+
+
+
 
 
 

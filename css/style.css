@@ -2,20 +2,110 @@
   Base Styles
 ==================================== */
 
-body
+body {
+	font-size: 11pt;
+	color: #4e4e4e;
+	font-family: "News+Cycle", sans-serif;
+	background-color: #fcfcfc;
+}
 
-h2 {}
+h2 {
+	font-size: 1.4em;
+	font-variant-caps: all-small-caps;
+	text-align: center;
+	margin-bottom: 10px;
+}
 
-.directory {}
+
+li {
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin: 0;
+  	padding: 0;
+}
+
+.search_container {
+	text-align: center;
+	margin: 20px;
+}
+
+#employeeGallery {
+	display: grid;
+	grid-template-columns: 70%;
+	align-items: center;
+	justify-content: space-evenly;
+	grid-gap: 5px;
+}
+
+.employee {
+	border: 1px solid #dfdfdf;
+	border-radius: 10px;
+	background-color: #ffffff;
+	margin: 2px;
+
+}
+
+img {
+	border-radius: 50%;
+  	height: 100px;
+  	padding: 20px;
+}
+
+.employeeText {
+	padding: 20px 3px 20px 0px;
+	flex-grow: 2;
+}
 
 
-.employee-card {}
+p {
+	font-size: .85em;
+	color: #848a8e;
+}
+.name {
+	font-weight: bold;
+	font-size: 1.1em;
+	color: #4e4e4e;
+}
+.email {
+	overflow-wrap: anywhere;
+}
+.phone, .address, .dob {
+	display: none;
+}
 
-.profile-pic {}
-
-#photo {}
 
 
 /* =================================
 Media Queries
 ==================================== */
+
+
+@media only screen and (min-width: 667px) {
+	#employeeGallery {
+		grid-template-columns: 46% 46%;
+	}
+	h2 {
+	text-align: left;
+	margin-left: 20px;
+	}	
+	.top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+
+@media only screen and (min-width: 998px) { 
+	#employeeGallery {
+		grid-template-columns: 30% 30% 30%;
+	}
+	.email {
+		font-size: .8em;
+	}
+	img {
+		padding: 15px;
+	}
+}
